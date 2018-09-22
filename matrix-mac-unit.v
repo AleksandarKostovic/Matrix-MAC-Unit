@@ -1,3 +1,6 @@
-module matrix_mac_unit;
+module matrix_mac_unit(
+    clock,
+    reset
+    );
 
 endmodule
