@@ -6,8 +6,8 @@
 module matrix_mac_unit #(
     parameter DATA_WITDH = 8
 )( //ports
-    clk,           //|<input
-    rst            //|<input
+    clock,         //|<input
+    reset          //|<input
 );
 
 endmodule
