@@ -1,7 +1,7 @@
-//===========================================
-// Copyright (c) Aleksandar Kostovic 2018 
-//   Matrix Multiply and Accumulate unit     
-//===========================================
+//===========================================//
+//  Copyright (c) Aleksandar Kostovic 2018   //
+//    Matrix Multiply and Accumulate unit    //
+//===========================================//
 
 module matrix_mac_unit #(
     parameter DATA_WIDTH = 8
@@ -17,9 +17,9 @@ module matrix_mac_unit #(
 
 //regs and/or wires
 
-//always block
+//sequential logic
 
-//assign block
+//combinational logic
 
 
 endmodule
