@@ -6,10 +6,13 @@
 module matrix_mac_unit #(
     parameter DATA_WIDTH = 8
 )( //ports
-    clock,         //|<input
-    reset,         //|<input
-    enable,        //|<input
-    clear          //|<input
+    clock,         //|<i
+    reset,         //|<i
+    enable,        //|<i
+    clear,         //|<i
+    matrix_1,      //|<i
+    matrix_2       //|<i
+    result         //|>o 
 );
 //inputs
 
