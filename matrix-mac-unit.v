@@ -3,6 +3,8 @@
 //    Matrix Multiply and Accumulate unit    //
 //===========================================//
 
+`timescale 1 ns / 1 ps 
+
 module matrix_mac_unit #(
     parameter DATA_WIDTH = 8
 )( //ports
