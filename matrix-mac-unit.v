@@ -5,9 +5,9 @@
 
 module matrix_mac_unit #(
     parameter integer DATA_WITDH = 8
-)(
-    i_clk,                 //|<input
-    i_rst                  //|<input
+)( //ports
+    i_clk,
+    i_rst
 );
 
 endmodule
