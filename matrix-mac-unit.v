@@ -11,7 +11,7 @@ module matrix_mac_unit #(
     enable,        //|<i
     clear,         //|<i
     matrix_1,      //|<i
-    matrix_2       //|<i
+    matrix_2,      //|<i
     result         //|>o 
 );
 
