@@ -11,5 +11,15 @@ module matrix_mac_unit #(
     enable,        //|<input
     clear          //|<input
 );
+//inputs
+
+//outputs
+
+//regs and/or wires
+
+//always block
+
+//assign block
+
 
 endmodule
