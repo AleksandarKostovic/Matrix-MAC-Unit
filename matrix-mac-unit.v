@@ -4,10 +4,12 @@
 //===========================================
 
 module matrix_mac_unit #(
-    parameter DATA_WITDH = 8
+    parameter DATA_WIDTH = 8
 )( //ports
     clock,         //|<input
-    reset          //|<input
+    reset,         //|<input
+    enable,        //|<input
+    clear          //|<input
 );
 
 endmodule
