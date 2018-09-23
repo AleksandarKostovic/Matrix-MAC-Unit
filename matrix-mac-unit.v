@@ -4,10 +4,10 @@
 //===========================================
 
 module matrix_mac_unit #(
-    parameter DATA_WITDH = 8
+    parameter integer DATA_WITDH = 8
 )(
-    clk,                 //|<input
-    rst                  //|<input
+    i_clk,                 //|<input
+    i_rst                  //|<input
 );
 
 endmodule
