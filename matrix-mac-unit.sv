@@ -22,19 +22,19 @@ input     [DATA_WIDTH-1:0]     clock;
 input     [DATA_WIDTH-1:0]     reset;
 input     [DATA_WIDTH-1:0]    enable;
 input     [DATA_WIDTH-1:0]     clear;
-input reg [DATA_WIDTH-1:0]  matrix_1;
-input reg [DATA_WIDTH-1:0]  matrix_2;
+input [DATA_WIDTH-1:0]  matrix_1;
+input [DATA_WIDTH-1:0]  matrix_2;
 
 //outputs
 output [DATA_WIDTH-1:0]       result;
 
 //reg
-reg [DATA_WIDTH-1:0]     accumulator;
+logic [DATA_WIDTH-1:0]     accumulator;
     
 //combinational logic
 
 //sequential logic
-    always @(posedge clock) begin
+    always_ff @(posedge clock) begin
       if (!reset) begin
           accumulator <= 0;
       end
