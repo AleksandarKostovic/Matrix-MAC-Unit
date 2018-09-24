@@ -30,6 +30,8 @@ output [DATA_WIDTH-1:0]   result [0:3][0:3];
 
 //reg
 reg [DATA_WIDTH-1:0] accumulator [0:3][0:3];
+    
+//combinational logic
 
 //sequential logic
     always @(posedge clock) begin
@@ -44,8 +46,4 @@ reg [DATA_WIDTH-1:0] accumulator [0:3][0:3];
       end
 
     end
-
-//combinational logic
- 
-
 endmodule
