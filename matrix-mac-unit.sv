@@ -28,7 +28,7 @@ module matrix_mac_unit #(
 //outputs
    output [DATA_WIDTH-1:0]      result [0:3][0:3];
 
-//reg
+//logic
    logic [DATA_WIDTH-1:0]  accumulator [0:3][0:3];
     
 //combinational logic
