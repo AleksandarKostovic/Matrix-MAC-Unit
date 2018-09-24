@@ -31,8 +31,6 @@ module matrix_mac_unit #(
 //logic
    logic [DATA_WIDTH-1:0]  accumulator [0:3][0:3];
     
-//combinational logic
-
 //sequential logic
     always_ff @(posedge clock) begin
       if (!reset) begin
@@ -46,4 +44,7 @@ module matrix_mac_unit #(
       end
 
     end
+   
+//combinational logic
+
 endmodule
