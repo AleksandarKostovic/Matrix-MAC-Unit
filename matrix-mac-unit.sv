@@ -6,7 +6,7 @@
 `timescale 1 ns / 1 ps 
 
 module matrix_mac_unit #(
-   parameter logic DATA_WIDTH = 8
+   parameter DATA_WIDTH = 8
 )( //ports
     clock,         //|<i
     reset,         //|<i
