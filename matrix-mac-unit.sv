@@ -13,8 +13,8 @@ module matrix_mac_unit #(
    input        [DATA_WIDTH-1:0]               reset,
    input        [DATA_WIDTH-1:0]              enable,
    input        [DATA_WIDTH-1:0]               clear,
-   input logic  [DATA_WIDTH-1:0] matrix_1 [0:3][0:3],
-   input logic  [DATA_WIDTH-1:0] matrix_2 [0:3][0:3],
+   input  logic [DATA_WIDTH-1:0] matrix_1 [0:3][0:3],
+   input  logic [DATA_WIDTH-1:0] matrix_2 [0:3][0:3],
 
 //outputs
    output logic [DATA_WIDTH-1:0]   result [0:3][0:3]
