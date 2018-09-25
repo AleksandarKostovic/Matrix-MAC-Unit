@@ -9,19 +9,19 @@ module matrix_mac_unit #(
    parameter DATA_WIDTH = 8
 )(
 //inputs
-   input       [DATA_WIDTH-1:0]                   clock,
-   input       [DATA_WIDTH-1:0]                   reset,
-   input       [DATA_WIDTH-1:0]                  enable,
-   input       [DATA_WIDTH-1:0]                   clear,
-   input logic [DATA_WIDTH-1:0]     matrix_1 [0:3][0:3],
-   input logic [DATA_WIDTH-1:0]     matrix_2 [0:3][0:3],
+   input       [DATA_WIDTH-1:0]               clock,
+   input       [DATA_WIDTH-1:0]               reset,
+   input       [DATA_WIDTH-1:0]              enable,
+   input       [DATA_WIDTH-1:0]               clear,
+   input logic [DATA_WIDTH-1:0] matrix_1 [0:3][0:3],
+   input logic [DATA_WIDTH-1:0] matrix_2 [0:3][0:3],
 
 //outputs
-   output [DATA_WIDTH-1:0]      result [0:3][0:3]
+   output [DATA_WIDTH-1:0]        result [0:3][0:3]
 );
 
 //logic
-   logic [DATA_WIDTH-1:0]  accumulator [0:3][0:3];
+   logic [DATA_WIDTH-1:0]    accumulator [0:3][0:3];
     
 //sequential logic
     always_ff @(posedge clock) begin
