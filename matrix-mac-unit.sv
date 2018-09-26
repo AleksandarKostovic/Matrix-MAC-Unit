@@ -1,9 +1,9 @@
-`timescale 1ns / 1ps 
-
 //===========================================//
 //  Copyright (c) Aleksandar Kostovic 2018   //
 //    Matrix Multiply and Accumulate unit    //
 //===========================================//
+
+`timescale 1ns / 1ps 
 
 module matrix_mac_unit #(
    parameter DATA_WIDTH = 8
