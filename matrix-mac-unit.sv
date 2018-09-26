@@ -9,10 +9,10 @@ module matrix_mac_unit #(
    parameter DATA_WIDTH = 8
 )(//ports
    
-   input clock,
-   input reset,
-   input enable,
-   input clear,
+   input  clock,
+   input  reset,
+   input  enable,
+   input  clear,
    input  logic [DATA_WIDTH-1:0] matrix_1 [0:3][0:3],
    input  logic [DATA_WIDTH-1:0] matrix_2 [0:3][0:3],
    output logic [DATA_WIDTH-1:0] result   [0:3][0:3]
