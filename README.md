@@ -1,8 +1,5 @@
 # Matrix-MAC-Unit
 
-8 bit 4X4 Matrix Multiply and Accumulate unit written in System Verilog.
+Matrix MAC unit is 8-bit Multiply and Accumulate unit for 4 X 4 size matrixes.
 
 ![alt text](matrix-mac-unit.png)
-
-
-Instructions on usage are soon to follow...
