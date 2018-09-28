@@ -5,9 +5,10 @@
 
 `timescale 1ns / 1ps 
 
-module matrix_mac_unit #(
-   parameter DATA_WIDTH = 8
-)(//ports
+import mmac_pkg::*;
+
+module matrix_mac_unit)
+(//ports
    
    input  clock,
    input  reset,
