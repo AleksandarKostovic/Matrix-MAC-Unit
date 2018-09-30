@@ -1,6 +1,6 @@
 //===========================================//
 //  Copyright (c) Aleksandar Kostovic 2018   //
-//    Matrix Multiply and Accumulate unit    //
+//          Matrix MAC unit package          //
 //===========================================//
 
 package mmac_pkg; //matrix-mac-package
