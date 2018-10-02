@@ -14,9 +14,9 @@ module matrix_mac_unit
    input  reset,
    input  enable,
    input  clear,
-   input  logic [DATA_WIDTH-1:0] matrix_1 [0:M_SIZE-1][0:M_SIZE-1],
-   input  logic [DATA_WIDTH-1:0] matrix_2 [0:M_SIZE-1][0:M_SIZE-1],
-   output logic [DATA_WIDTH-1:0] result   [0:M_SIZE-1][0:M_SIZE-1]
+   input  logic [DATA_WIDTH-1:0] matrix_1,
+   input  logic [DATA_WIDTH-1:0] matrix_2,
+   output logic [DATA_WIDTH-1:0] result
 );
 
 //logic
