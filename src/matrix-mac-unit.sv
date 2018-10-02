@@ -20,7 +20,7 @@ module matrix_mac_unit
 );
 
 //logic
-   logic [DATA_WIDTH-1:0] accumulator [0:M_SIZE-1][0:M_SIZE-1];
+   logic [DATA_WIDTH-1:0] accumulator;
     
 //sequential logic
     always_ff @(posedge clock) begin
