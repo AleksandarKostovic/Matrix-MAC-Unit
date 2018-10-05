@@ -48,10 +48,10 @@ module Mat_mult(A,B,Res);
     input [63:0] B;
     output [63:0] Res;
     //internal variables    
-    logic [63:0] Res;
+    reg [63:0] Res;
     logic [7:0] A1 [0:3][0:3];
-    logic [7:0] B1 [0:3][0:3];
-    logic [7:0] Res1 [0:3][0:3]; 
+    reg [7:0] B1 [0:3][0:3];
+    reg [7:0] Res1 [0:3][0:3]; 
     int i,j,k;
 
     always_ff @ (A or B)
