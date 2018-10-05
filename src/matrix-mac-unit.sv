@@ -7,58 +7,28 @@
 
 import mmac_pkg::*;
 
-module matrix_mac_unit
-(//ports
-   
-   input  clock,
-   input  reset,
-   input  enable,
-   input  clear,
-   input  logic [DATA_WIDTH-1:0] matrix_1,
-   input  logic [DATA_WIDTH-1:0] matrix_2,
-   output logic [DATA_WIDTH-1:0] result
-);
+module matrix_mac_unit(clk,rst,enable,clear,matrixA,matrixB,Res);
 
-//logic
-   logic [DATA_WIDTH-1:0] accumulator;
-    
-//sequential logic
-    always_ff @(posedge clock) begin
-      if (!reset) begin
-          accumulator <= 0;
-      end
-      else if (clear) begin
-          accumulator <= 0;
-      end
-      else begin
-          accumulator <= result;
-      end
-
-    end
-   
-//combinational logic
-assign result = enable ? matrix_1 * matrix_2 + accumulator : accumulator;
-
-endmodule
-
-
-module Mat_mult(A,B,Res);
-  
-    input [63:0] A;
-    input [63:0] B;
+    input clk;
+    input rst;
+    input clear;
+    input enable;
+    input [63:0] matrixA;
+    input [63:0] matrixB;
     output [63:0] Res;
-    //internal variables    
+    //internal variables 
+    logic accumulator;   
     logic [63:0] Res;
     logic [7:0] A1 [0:3][0:3];
     logic [7:0] B1 [0:3][0:3];
     logic [7:0] Res1 [0:3][0:3]; 
     int i,j,k;
 
-    always_ff @ (A or B)
+    always_ff @ (matrixA or matrixB)
     begin
     //Initialize the matrices-convert 1 D to 3D arrays
-        {A1[0][0],A1[0][1],A1[1][0],A1[1][1],A1[1][2],A1[2][1],A1[2][0],A1[0][2],A1[2][3],A1[3][2],A1[3][0],A1[0][3],A1[3][1],A1[1][3]} = A;
-        {B1[0][0],B1[0][1],B1[1][0],B1[1][1],B1[1][2],B1[2][1],B1[2][0],B1[0][2],B1[2][3],B1[3][2],B1[3][0],B1[0][3],B1[3][1],B1[1][3]} = B;
+        {A1[0][0],A1[0][1],A1[1][0],A1[1][1],A1[1][2],A1[2][1],A1[2][0],A1[0][2],A1[2][3],A1[3][2],A1[3][0],A1[0][3],A1[3][1],A1[1][3]} = matrixA;
+        {B1[0][0],B1[0][1],B1[1][0],B1[1][1],B1[1][2],B1[2][1],B1[2][0],B1[0][2],B1[2][3],B1[3][2],B1[3][0],B1[0][3],B1[3][1],B1[1][3]} = matrixB;
         i = 0;
         j = 0;
         k = 0;
@@ -72,5 +42,17 @@ module Mat_mult(A,B,Res);
         Res = {Res1[0][0],Res1[0][1],Res1[1][0],Res1[1][1],Res1[1][2],Res1[2][1],Res1[2][0],Res1[0][2],Res1[2][3],Res1[3][2],Res1[3][0],Res1[0][3],Res1[3][1],Res1[1][3]};            
     end 
 
+    always_ff @(posedge clk) begin
+      if (!rst) begin
+          accumulator <= 0;
+      end
+      else if (clear) begin
+          accumulator <= 0;
+      end
+      else begin
+          accumulator <= Res;
+      end
+
+    end
 
 endmodule
