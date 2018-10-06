@@ -50,7 +50,7 @@ module matrix_mac_unit(
           accumulator <= 0;
         end
         else begin
-          accumulator <= res;
+          accumulator <= result;
         end
 
     end
