@@ -13,15 +13,15 @@ module matrix_mac_unit(clk,rst,enable,clear,matrixA,matrixB,res);
     input rst;
     input clear;
     input enable;
-    input [63:0] matrixA;
-    input [63:0] matrixB;
-    output [63:0] res;
+    input [DATA_WIDTH-1:0] matrixA;
+    input [DATA_WIDTH-1:0] matrixB;
+    output [DATA_WIDTH-1:0] res;
     //internal variables 
-    logic accumulator;   
-    logic [63:0] res;
-    logic [7:0] A1 [0:3][0:3];
-    logic [7:0] B1 [0:3][0:3];
-    logic [7:0] Res1 [0:3][0:3]; 
+    logic [DATA_WIDTH-1:0] accumulator [0:M_SIZE-1][0:M_SIZE-1];   
+    logic [DATA_WIDTH-1:0] res;
+    logic [VAR_WIDTH-1:0] A1 [0:M_SIZE-1][0:M_SIZE-1];
+    logic [VAR_WIDTH-1:0] B1 [0:M_SIZE-1][0:M_SIZE-1];
+    logic [VAR_WIDTH-1:0] Res1 [0:M_SIZE-1][0:M_SIZE-1]; 
     int i,j,k;
 
     always_ff @ (matrixA or matrixB)
