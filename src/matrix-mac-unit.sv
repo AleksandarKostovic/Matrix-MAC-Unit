@@ -9,13 +9,13 @@ import mmac_pkg::*;
 
 module matrix_mac_unit(
 
-    input clock,
-    input reset,
-    input clear,
-    input enable,
-    input [DATA_WIDTH-1:0] matrixA,
-    input [DATA_WIDTH-1:0] matrixB,
-    output logic [DATA_WIDTH-1:0] result
+    input clock,                         //|<i
+    input reset,                         //|<i
+    input clear,                         //|<i
+    input enable,                        //|<i 
+    input [DATA_WIDTH-1:0] matrixA,      //|<i
+    input [DATA_WIDTH-1:0] matrixB,      //|<i
+    output logic [DATA_WIDTH-1:0] result //|>o
 );
     //internal variables 
     logic [DATA_WIDTH-1:0] accumulator;
