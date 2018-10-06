@@ -7,18 +7,18 @@
 
 import mmac_pkg::*;
 
-module matrix_mac_unit(clk,rst,enable,clear,matrixA,matrixB,res);
+module matrix_mac_unit(
 
-    input clk;
-    input rst;
-    input clear;
-    input enable;
-    input [DATA_WIDTH-1:0] matrixA;
-    input [DATA_WIDTH-1:0] matrixB;
-    output [DATA_WIDTH-1:0] res;
+    input clk,
+    input rst,
+    input clear,
+    input enable,
+    input [DATA_WIDTH-1:0] matrixA,
+    input [DATA_WIDTH-1:0] matrixB,
+    output logic [DATA_WIDTH-1:0] res
+);
     //internal variables 
-    logic [DATA_WIDTH-1:0] accumulator;   
-    logic [DATA_WIDTH-1:0] res;
+    logic [DATA_WIDTH-1:0] accumulator;
     logic [VAR_WIDTH-1:0] A1 [0:M_SIZE-1][0:M_SIZE-1];
     logic [VAR_WIDTH-1:0] B1 [0:M_SIZE-1][0:M_SIZE-1];
     logic [VAR_WIDTH-1:0] Res1 [0:M_SIZE-1][0:M_SIZE-1]; 
@@ -41,8 +41,6 @@ module matrix_mac_unit(clk,rst,enable,clear,matrixA,matrixB,res);
         //final output assignment - 3D array to 1D array conversion.            
         res = {Res1[0][0],Res1[0][1],Res1[1][0],Res1[1][1],Res1[1][2],Res1[2][1],Res1[2][0],Res1[0][2],Res1[2][3],Res1[3][2],Res1[3][0],Res1[0][3],Res1[3][1],Res1[1][3]};            
     end 
-    
-//accumulatior block
 
     always_ff @(posedge clk) begin
       if (!rst) begin
