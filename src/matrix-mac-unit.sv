@@ -7,18 +7,13 @@
 
 import mmac_pkg::*;
 
-module matrix_mac_unit(
- 
-    input clock,                           //|<i
-    input reset,                           //|<i
-    input clear,                           //|<i
-    input enable,                          //|<i 
-    input  logic [DATA_WIDTH-1:0] matrixA ,//|<i
+module matrix_multiply_unit(
+    
+    input  logic [DATA_WIDTH-1:0] matrixA, //|<i
     input  logic [DATA_WIDTH-1:0] matrixB, //|<i
     output logic [DATA_WIDTH-1:0] result   //|>o
 );
     //internal variables 
-    logic [DATA_WIDTH-1:0] accumulator;
     logic [VAR_WIDTH-1:0] A1 [0:M_SIZE-1][0:M_SIZE-1];
     logic [VAR_WIDTH-1:0] B1 [0:M_SIZE-1][0:M_SIZE-1];
     logic [VAR_WIDTH-1:0] Res1 [0:M_SIZE-1][0:M_SIZE-1]; 
@@ -41,6 +36,19 @@ module matrix_mac_unit(
         //final output assignment - 3D array to 1D array conversion.            
         result = {Res1[0][0],Res1[0][1],Res1[1][0],Res1[1][1],Res1[1][2],Res1[2][1],Res1[2][0],Res1[0][2],Res1[2][3],Res1[3][2],Res1[3][0],Res1[0][3],Res1[3][1],Res1[1][3]};            
     end 
+endmodule
+
+module matrix_accumulate_unit(
+
+    input clock,                           //|<i
+    input reset,                           //|<i
+    input clear,                           //|<i
+    input enable,                          //|<i
+    input result,                          //|<i
+    output out                             //|>o    
+); 
+
+logic [DATA_WIDTH-1:0] accumulator;
 
     always_ff @(posedge clock) begin
         if (!reset) begin
@@ -55,4 +63,6 @@ module matrix_mac_unit(
 
     end
 
-endmodule
+assign out = enable ? result + accumulator : accumulator;
+
+endmodule 
