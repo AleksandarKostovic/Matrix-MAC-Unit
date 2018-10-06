@@ -17,7 +17,7 @@ module matrix_mac_unit(clk,rst,enable,clear,matrixA,matrixB,res);
     input [DATA_WIDTH-1:0] matrixB;
     output [DATA_WIDTH-1:0] res;
     //internal variables 
-    logic [DATA_WIDTH-1:0] accumulator [0:M_SIZE-1][0:M_SIZE-1];   
+    logic [DATA_WIDTH-1:0] accumulator;   
     logic [DATA_WIDTH-1:0] res;
     logic [VAR_WIDTH-1:0] A1 [0:M_SIZE-1][0:M_SIZE-1];
     logic [VAR_WIDTH-1:0] B1 [0:M_SIZE-1][0:M_SIZE-1];
