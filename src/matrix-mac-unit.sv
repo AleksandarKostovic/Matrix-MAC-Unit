@@ -6,7 +6,7 @@
 `timescale 1ns / 1ps 
 
 import mmac_pkg::*;
-
+/*****************************MATRIX MULTIPLY*******************************/
 module matrix_multiply_unit(
     
     input  logic [DATA_WIDTH-1:0] matrixA, //|<i
@@ -38,6 +38,7 @@ module matrix_multiply_unit(
     end 
 endmodule
 
+/*****************************MATRIX ACCUMULATE*******************************/
 module matrix_accumulate_unit(
 
     input clock,                           //|<i
@@ -48,6 +49,7 @@ module matrix_accumulate_unit(
     output out                             //|>o    
 ); 
 
+//internal register
 logic [DATA_WIDTH-1:0] accumulator;
 
     always_ff @(posedge clock) begin
