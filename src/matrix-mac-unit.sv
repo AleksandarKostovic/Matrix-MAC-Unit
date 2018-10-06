@@ -7,7 +7,7 @@
 
 import mmac_pkg::*;
 
-module matrix_mac_unit(clk,rst,enable,clear,matrixA,matrixB,Res);
+module matrix_mac_unit(clk,rst,enable,clear,matrixA,matrixB,res);
 
     input clk;
     input rst;
@@ -15,10 +15,10 @@ module matrix_mac_unit(clk,rst,enable,clear,matrixA,matrixB,Res);
     input enable;
     input [63:0] matrixA;
     input [63:0] matrixB;
-    output [63:0] Res;
+    output [63:0] res;
     //internal variables 
     logic accumulator;   
-    logic [63:0] Res;
+    logic [63:0] res;
     logic [7:0] A1 [0:3][0:3];
     logic [7:0] B1 [0:3][0:3];
     logic [7:0] Res1 [0:3][0:3]; 
@@ -39,7 +39,7 @@ module matrix_mac_unit(clk,rst,enable,clear,matrixA,matrixB,Res);
                 for(k=0;k < 4;k=k+1)
                     Res1[i][j] = Res1[i][j] + (A1[i][k] * B1[k][j]);
         //final output assignment - 3D array to 1D array conversion.            
-        Res = {Res1[0][0],Res1[0][1],Res1[1][0],Res1[1][1],Res1[1][2],Res1[2][1],Res1[2][0],Res1[0][2],Res1[2][3],Res1[3][2],Res1[3][0],Res1[0][3],Res1[3][1],Res1[1][3]};            
+        res = {Res1[0][0],Res1[0][1],Res1[1][0],Res1[1][1],Res1[1][2],Res1[2][1],Res1[2][0],Res1[0][2],Res1[2][3],Res1[3][2],Res1[3][0],Res1[0][3],Res1[3][1],Res1[1][3]};            
     end 
 
     always_ff @(posedge clk) begin
@@ -50,7 +50,7 @@ module matrix_mac_unit(clk,rst,enable,clear,matrixA,matrixB,Res);
           accumulator <= 0;
       end
       else begin
-          accumulator <= Res;
+          accumulator <= res;
       end
 
     end
