@@ -6,7 +6,8 @@
 `timescale 1ns / 1ps 
 
 import mmac_pkg::*;
-/*****************************MATRIX MULTIPLY*******************************/
+
+/*--------------------------MATRIX MULTIPLY-----------------------------*/
 module matrix_multiply_unit(
     
     input  logic [DATA_WIDTH-1:0] matrixA, //|<i
@@ -38,7 +39,8 @@ module matrix_multiply_unit(
     end 
 endmodule
 
-/*****************************MATRIX ACCUMULATE*******************************/
+/*--------------------------MATRIX ACCUMULATE-----------------------------*/
+
 module matrix_accumulate_unit(
 
     input clock,                           //|<i
