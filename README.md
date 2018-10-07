@@ -14,11 +14,11 @@ The design supports 4 X 4 size matrixes that are standard size in deep neural ne
 The code is
 
 ```systemverilog
-parameter DATA_WIDTH = 8
+localparam DATA_WIDTH = 8
 ```
 Matrix size can be changed by changing
 
 ```systemverilog
-parameter M_SIZE = 4
+localparam M_SIZE = 4
 ```
 ,changing the loop and making more combinations inside the initilaization from 1D to 2D and vice-versa.
