@@ -8,6 +8,7 @@
 import mmac_pkg::*;
 
 /*--------------------------MATRIX MULTIPLY-----------------------------*/
+
 module matrix_multiply_unit(
     
     input  logic [DATA_WIDTH-1:0] matrixA, //|<i
