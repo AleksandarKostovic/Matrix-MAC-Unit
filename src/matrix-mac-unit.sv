@@ -48,8 +48,8 @@ module matrix_accumulate_unit(
     input reset,                           //|<i
     input clear,                           //|<i
     input enable,                          //|<i
-    input [DATA_WIDTH-1:0] result,         //|<i
-    output [DATA_WIDTH-1:0] out            //|>o    
+    input  logic [DATA_WIDTH-1:0] result,  //|<i
+    output logic [DATA_WIDTH-1:0] out      //|>o    
 ); 
 
 //internal register
