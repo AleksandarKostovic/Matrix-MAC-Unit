@@ -7,7 +7,7 @@
 
 import mmac_pkg::*;
 
-/*--------------------------MATRIX MULTIPLY-----------------------------*/
+/*--------------------------MATRIX MULTIPLY STAGE-----------------------------*/
 
 module matrix_multiply_unit(
     
@@ -40,7 +40,7 @@ module matrix_multiply_unit(
     end 
 endmodule
 
-/*--------------------------MATRIX ACCUMULATE-----------------------------*/
+/*--------------------------MATRIX ACCUMULATE STAGE-----------------------------*/
 
 module matrix_accumulate_unit(
 
