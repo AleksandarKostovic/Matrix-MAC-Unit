@@ -7,7 +7,11 @@
 
 import mmac_pkg::*;
 
-/*--------------------------MATRIX MULTIPLY STAGE-----------------------------*/
+/*----------------------------MATRIX MULTIPLY STAGE-------------------------------*/
+//                                                                                //
+// The input matrix is first deflated into 1D array, multiplied and than re-built //                                                                      
+//                                                                                //
+/*--------------------------------------------------------------------------------*/
 
 module matrix_multiply_unit(
     
