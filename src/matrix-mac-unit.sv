@@ -44,7 +44,11 @@ module matrix_multiply_unit(
     end 
 endmodule
 
-/*--------------------------MATRIX ACCUMULATE STAGE-----------------------------*/
+/*----------------------------MATRIX ACCUMULATE STAGE-------------------------------*/
+//                                                                                  //
+//    Accumulation. If the result of matrix is 0, the 0 is stored in accumulator    //                                                                      
+//                                                                                  //
+/*----------------------------------------------------------------------------------*/
 
 module matrix_accumulate_unit(
 
