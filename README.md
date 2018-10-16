@@ -21,4 +21,4 @@ Matrix size can be changed by changing
 ```systemverilog
 localparam M_SIZE = 4
 ```
-,changing the loop and making more combinations inside the initilaization from 1D to 2D and vice-versa.
+changing the loop and making more combinations inside the initilaization from 1D to 2D and vice-versa.
