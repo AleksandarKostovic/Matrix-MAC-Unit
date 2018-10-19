@@ -76,6 +76,7 @@ logic [DATA_WIDTH-1:0] accumulator;
 
     end
 
+//final assignment
 assign out = enable ? result + accumulator : accumulator;
 
 endmodule 
