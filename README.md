@@ -1,6 +1,6 @@
 # Matrix-MAC-Unit
 
-Matrix MAC unit is 8-bit Multiply and Accumulate core for 4 X 4 size matrixes.
+Matrix MAC Unit is n-bit Multiply and Accumulate core for 4 X 4 size matrixes.
 
 ![alt text](matrix-mac-unit.png)
 
