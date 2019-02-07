@@ -10,7 +10,7 @@ Generally MAC units are the base of DSP's like FIR filters.
 
 However to do calculation of Deep Neural Networks(DNNs), the matrix ability has to be added to the design.
 
-The design supports 4 X 4 size matrixes that are standard size in deep neural network. The reason why the design is 8-bit is that for deep learning computation hardware needs to be 8-bit in width at least. Bit width can be changd by changing the number 8 in code for anything suitable.
+The design supports 4 X 4 size matrices that are standard size in deep neural network. The reason why the design is 8-bit is that for deep learning computation hardware needs to be 8-bit in width at least. Bit width can be changd by changing the number 8 in code for anything suitable.
 The code is
 
 ```systemverilog
